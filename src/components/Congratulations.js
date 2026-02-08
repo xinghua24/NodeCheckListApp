@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Congratulations.css';
 
-function Congratulations() {
+function Congratulations({ onDismiss }) {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
@@ -9,9 +9,29 @@ function Congratulations() {
         setTimeout(() => setShow(true), 100);
     }, []);
 
+    const handleDismiss = () => {
+        if (onDismiss) {
+            onDismiss();
+        }
+    };
+
     return (
-        <div className={`congratulations-overlay ${show ? 'show' : ''}`}>
-            <div className="congratulations-card">
+        <div
+            className={`congratulations-overlay ${show ? 'show' : ''}`}
+            onClick={handleDismiss}
+        >
+            <div
+                className="congratulations-card"
+                onClick={(event) => event.stopPropagation()}
+            >
+                <button
+                    type="button"
+                    className="congrats-close"
+                    onClick={handleDismiss}
+                    aria-label="Close congratulations"
+                >
+                    x
+                </button>
                 <div className="congrats-emoji">🎉</div>
                 <h2>Congratulations!</h2>
                 <p>You've completed all your tasks for today!</p>

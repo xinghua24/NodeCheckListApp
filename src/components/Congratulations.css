@@ -30,6 +30,32 @@
     animation: slideIn 0.5s ease;
 }
 
+.congrats-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.congrats-close:hover {
+    background: rgba(0, 0, 0, 0.16);
+    transform: scale(1.05);
+}
+
+.congrats-close:focus-visible {
+    outline: 3px solid #4ecdc4;
+    outline-offset: 2px;
+}
+
 @keyframes slideIn {
     from {
         transform: translateY(-100px);

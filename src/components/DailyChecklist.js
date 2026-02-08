@@ -23,6 +23,10 @@ function DailyChecklist() {
         }
     }, [tasks]);
 
+    const handleDismissCongrats = () => {
+        setShowCongrats(false);
+    };
+
     const fetchTasks = async () => {
         setLoading(true);
         try {
@@ -118,7 +122,7 @@ function DailyChecklist() {
                 </>
             )}
 
-            {showCongrats && <Congratulations />}
+            {showCongrats && <Congratulations onDismiss={handleDismissCongrats} />}
         </div>
     );
 }
