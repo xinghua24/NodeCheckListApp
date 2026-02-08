@@ -1,0 +1,163 @@
+.daily-task-manager {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.manager-header h2 {
+    color: #333;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.add-task-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background: #667eea;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.add-task-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.manager-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.daily-tasks-list {
+    margin-top: 2rem;
+}
+
+.daily-task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    gap: 1rem;
+}
+
+.daily-task-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.task-card-content {
+    flex: 1;
+}
+
+.task-card-content h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.task-card-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.task-card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background: #667eea;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.no-tasks {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #666;
+}
+
+.no-tasks p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .daily-task-manager {
+        padding: 1.5rem;
+    }
+
+    .manager-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .manager-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .daily-task-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-card-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

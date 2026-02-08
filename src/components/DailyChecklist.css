@@ -1,0 +1,113 @@
+.daily-checklist {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.date-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.date-display {
+    flex: 1;
+    text-align: center;
+}
+
+.date-display h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.date-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.date-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.today-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #667eea;
+    background: #f0f4ff;
+    color: #667eea;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.today-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.no-tasks {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #666;
+}
+
+.no-tasks p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.tasks-container {
+    margin-top: 1.5rem;
+}
+
+.task-summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f0f4ff;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .daily-checklist {
+        padding: 1.5rem;
+    }
+
+    .date-navigation {
+        flex-direction: column;
+    }
+
+    .date-display h2 {
+        font-size: 1.2rem;
+    }
+
+    .date-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
